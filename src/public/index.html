@@ -5,14 +5,25 @@
 	<title>Default Welcome Page</title>
 </head>
 <body>
-	<h1>Express NodeJS Server</h1>
-	<p>This server implements a server with REST api endpoints.</p>
-
+	<h1>Endpoint Server Implemented with NodeJS + Express</h1>
+	<p>This server implements endpoints for Users, Posts, and Comments.</p>
 	<h3>Available Routes</h3>
 	<p>[GET: /] response: index.html</p>
-	<p>[POST: /] request: json-object, response: json-object</p>
-	<p>[GET: /posts] response: mock post data</p>
-	<p>[POST: /posts] request: { title, content }, response: mock post object</p>
-	<p>* All data is saved in memory and is not persistent.</p>
+	<p>[POST: /test] request: json-object, response: json-object</p>
+	<p>[GET: /users] response: { status, data }</p>
+	<p>[GET: /users/:id] request: { username, email, about }, response: { status, data }</p>
+	<p>[POST: /users] request: { username, email, about }, response: { status, data }</p>
+	<p>[PUT: /users/:id] response: { status, data }</p>
+	<p>[DELETE: /users/:id] response: { status, data }</p>
+	<p>[GET: /posts] response: { status, data }</p>
+	<p>[GET: /posts/:id] request: { title, author, content }, response: { status, data }</p>
+	<p>[POST: /posts] request: { title, author, content }, response: { status, data }</p>
+	<p>[PUT: /posts/:id] response: { status, data }</p>
+	<p>[DELETE: /posts/:id] response: { status, data }</p>
+	<p>[GET: /comment] response: { status, data }</p>
+	<p>[GET: /comment/:id] request: { user, content, post }, response: { status, data }</p>
+	<p>[POST: /comment] request: { user, content, post }, response: { status, data }</p>
+	<p>[PUT: /comment/:id] response: { status, data }</p>
+	<p>[DELETE: /comment/:id] response: { status, data }</p>
 </body>
 </html>
