@@ -1,0 +1,28 @@
+{
+  "name": "js-api-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "jchiang",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn run start-db & yarn run start-server",
+    "start-server": "node ./src/server.js",
+    "start-server-debug": "DEBUG=js-api-server:server node ./src/server.js",
+	"start-db": "mongod --dbpath data",
+	"test": "jest --forceExit"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "helmet": "^3.12.0",
+    "http-errors": "^1.6.3",
+    "mongoose": "^5.0.15",
+    "morgan": "^1.9.0",
+    "supertest": "^3.0.0",
+    "validator": "^9.4.1"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3"
+  }
+}
